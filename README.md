@@ -23,7 +23,7 @@
 
 ```bash
 git clone <your-repo-url>
-cd moscow_zoo_totem_bot
+cd zoo_totem_bot
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -79,7 +79,7 @@ AnswerOption("Текст ответа", {"animal_id": 3, "other_animal_id": 1})
 ## Структура проекта
 
 ```text
-moscow_zoo_totem_bot/
+zoo_totem_bot/
 ├─ src/bot/
 │  ├─ data/quiz.py              # животные, вопросы, веса ответов
 │  ├─ handlers/common.py        # старт, справка, опека, privacy
