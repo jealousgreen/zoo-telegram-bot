@@ -28,8 +28,8 @@ class Settings:
     guardianship_url: str = "https://moscowzoo.ru/about/guardianship"
     animals_catalog_url: str = "https://moscowzoo.ru/animals/kinds"
     privacy_url: str | None = None
-    zoo_contact_email: str = "zoopark@culture.mos.ru"
-    zoo_contact_phone: str = "+7 499 252-29-51"
+    zoo_contact_email: str
+    zoo_contact_phone: str
 
     @property
     def bot_link(self) -> str:
@@ -56,6 +56,6 @@ def load_settings() -> Settings:
         admin_chat_id=_int_or_none(os.getenv("ADMIN_CHAT_ID")),
         database_path=db_path,
         privacy_url=os.getenv("PRIVACY_URL") or None,
-        zoo_contact_email=os.getenv("ZOO_CONTACT_EMAIL", "zoopark@culture.mos.ru"),
-        zoo_contact_phone=os.getenv("ZOO_CONTACT_PHONE", "+7 499 252-29-51"),
+        zoo_contact_email=os.getenv("ZOO_CONTACT_EMAIL"),
+        zoo_contact_phone=os.getenv("ZOO_CONTACT_PHONE"),
     )

@@ -26,16 +26,7 @@ def _absolute(base_url: str, maybe_url: str | None) -> str | None:
 
 
 async def resolve_photo_url(animal: Animal) -> str | None:
-    """Returns a ready image URL for Telegram.
 
-    Priority:
-    1. Manually configured direct photo_url.
-    2. OpenGraph/Twitter/JSON-LD image from the official animal page.
-    3. First useful <img> from the official animal page.
-
-    The website may change, so failures are logged and the bot gracefully falls
-    back to sending a text result with a link to the animal page.
-    """
     if animal.photo_url:
         return animal.photo_url
 
