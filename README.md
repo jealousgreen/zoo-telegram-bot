@@ -22,8 +22,8 @@
 ## Быстрый запуск
 
 ```bash
-git clone <your-repo-url>
-cd zoo_totem_bot
+git clone https://github.com/jealousgreen/zoo-telegram-bot.git
+cd zoo_telegram_bot
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -79,7 +79,7 @@ AnswerOption("Текст ответа", {"animal_id": 3, "other_animal_id": 1})
 ## Структура проекта
 
 ```text
-zoo_totem_bot/
+zoo_telegram_bot/
 ├─ src/bot/
 │  ├─ data/quiz.py              # животные, вопросы, веса ответов
 │  ├─ handlers/common.py        # старт, справка, опека, privacy
